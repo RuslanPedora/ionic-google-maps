@@ -9,9 +9,14 @@
   <button ion-button (click)='injectGoogleMapsSDK()' *ngIf='!googleMapInjected'>
     Inject google maps
   </button>
-  <button ion-button (click)='initMap ()' *ngIf='!mapInitialized'>
+  <button ion-button (click)='initMap()' *ngIf='!mapInitialized'>
     Init map
+  </button>     
+  <button ion-button (click)='createMarker()' *ngIf='mapInitialized'>
+    Create marker
   </button> 
-  <div #map id='map'>       
-  </div>
+  <button ion-button (click)='clear()' *ngIf='mapInitialized'>
+    Delete marker
+  </button> 
+  <div #map id='map'></div>
 </ion-content>
