@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Google maps
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content id='google-maps-content'>
+  <button ion-button (click)='injectGoogleMapsSDK()' *ngIf='!googleMapInjected'>
+    Inject google maps
+  </button>
+  <button ion-button (click)='initMap ()' *ngIf='!mapInitialized'>
+    Init map
+  </button> 
+  <div #map id='map'>       
+  </div>
+</ion-content>
